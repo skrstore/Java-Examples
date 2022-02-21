@@ -1,0 +1,9 @@
+create or replace function selectStd(id number)
+  return varchar
+  is
+  res varchar(30);
+  begin
+  select name into res from student where id =id;
+  return res;
+  end;
+/
